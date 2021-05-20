@@ -1,0 +1,45 @@
+Syntax Parse:
+    grammer validator
+
+Lexical Environment:
+    where something sits physically, concept regarding scopes
+
+ Execution Context:
+    current running environement
+    creation phase (setup memory for variables and functions(hoisting)) -> execution phase (runs code line by line )
+
+Object:
+    Collection of key value pairs
+
+JS Engine creates a global Obj and "this" for us in our execution context. There is always a global
+object, in browser for every tab there is seperate window object if js is running on
+backend it will be different gobal obj but there will always be a global obj. on global level window(global variable) 
+is equal to this.
+
+Hoisting:
+    variables and function definitions are not physically pushed to the top. assigning memory to variables and functions
+    during creation phase of execution context. for variables only variable declaration is done, while 
+    for functions complete body is allocated into memory. thats why for variabes "undefined"
+
+Single Threaded and Synchornous: 
+    one command at a time.
+
+* everytime a function is called a new execution context is created for that function
+* a variable not defined in a context will look for its lexical env declaration
+* js use dynamic data typing
+* Premitive data types are uni valued, means it cant be an object [undefined, null, boolean, number(floating point), string, symbol]
+* operator associativity defines the direction of execution, left to right or right to left
+* outer  reference is determined by lexical environment
+Coercion: converting one value type into another 
+* || operator returns the first value it gets that can be coerced to true and thus can be used to set
+    default values like let name = param || "default name"
+
+Namespace: a container to keep variables and functions 
+First Class Functions: every thing can we can do with othery types(assign to variables, pass them around, create them on fly)
+can be done on functions. Function has 2 special properties: name and code(the actual code that we write) it can also 
+hace Premitive type, object and function.
+
+how js is asynchorous:
+
+
+JSON vs Object Literals:
